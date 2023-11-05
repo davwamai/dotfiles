@@ -78,9 +78,7 @@ require("lazy").setup({
     build = "cd app && npm install",
   },
   { "uga-rosa/ccc.nvim" },
-  { "nvim-pack/nvim-spectre" },
   { "kylechui/nvim-surround" },
-  { "nycrat/todo.nvim" },
 
   -- looks
   {
@@ -91,6 +89,4 @@ require("lazy").setup({
   { "nvim-lualine/lualine.nvim" },
   { "lukas-reineke/indent-blankline.nvim" },
   { 'rose-pine/neovim', name = 'rose-pine' },
-  -- { dir = "~/personal/repositories/MISC/rose-pine" },
-  -- { "nycrat/rose-pine" },
 })

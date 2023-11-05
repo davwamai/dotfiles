@@ -47,14 +47,6 @@ lsp.format_mapping("<leader>m", {
 
 lsp.setup()
 
-require("mason-nvim-dap").setup({
-  ensure_installed = { "python", "cpp" },
-  automatic_installation = true,
-  handlers = {
-    function(config) require("mason-nvim-dap").default_setup(config) end,
-  },
-})
-
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 require("cmp").setup({
   performance = {
