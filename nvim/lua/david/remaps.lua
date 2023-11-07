@@ -37,7 +37,7 @@ xnoremap(
 xnoremap("<leader>y", "\"+y", silent)
 
 -- built in terminal
-nnoremap("<leader>t", "<Cmd>sp<CR> <Cmd>term<CR> <Cmd>resize 20N<CR> i", silent)
+nnoremap("<leader>t", "<Cmd>vsp<CR> <Cmd>term<CR> <Cmd>resize 20N<CR> i", silent)
 tnoremap("<C-c><C-c>", "<C-\\><C-n>", silent)
 --Alt v to paste sys clipboard into terminal
 tnoremap("<D-v>", function()
