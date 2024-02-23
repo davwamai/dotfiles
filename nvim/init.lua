@@ -1,7 +1,10 @@
-vim.g.mapleader = " "
+if vim.loader then
+	vim.loader.enable()
+end
 
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-vim.loader.enable()
+_G.dd = function(...)
+	require("util.debug").dump(...)
+end
+vim.print = _G.dd
 
-require("david")
+require("config.lazy")
