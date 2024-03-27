@@ -1,24 +1,9 @@
 return {
-	-- Create annotations with one keybind, and jump your cursor in the inserted annotation
-	{
-		"danymat/neogen",
-		keys = {
-			{
-				"<leader>cc",
-				function()
-					require("neogen").generate({})
-				end,
-				desc = "Neogen Comment",
-			},
-		},
-		opts = { snippet_engine = "luasnip" },
-	},
-
 	-- Incremental rename
 	{
 		"smjonas/inc-rename.nvim",
-		cmd = "IncRename",
 		config = true,
+		cmd = "IncRename",
 	},
 
 	-- Refactoring tool
@@ -79,19 +64,26 @@ return {
 	},
 
 	{
-		"simrat39/symbols-outline.nvim",
-		keys = { { "<leader>cs", "<cmd>SymbolsOutline<cr>", desc = "Symbols Outline" } },
-		cmd = "SymbolsOutline",
-		opts = {
-			position = "right",
-		},
-	},
-
-	{
 		"nvim-cmp",
 		dependencies = { "hrsh7th/cmp-emoji" },
 		opts = function(_, opts)
 			table.insert(opts.sources, { name = "emoji" })
+		end,
+	},
+	{
+		"lervag/vimtex",
+		init = function()
+			-- Use init for configuration, don't use the more common "config".
+			vim.g["vimtex_view_method"] = "skim"
+			vim.g["vimtex_quickfix_mode"] = 0
+			vim.g["vimtex_view_skim_sync"] = 1
+			vim.g["vimtex_view_skim_activate"] = 1
+			vim.g["vimtex_log_ignore"] = {
+				"Underfull",
+				"Overfull",
+				"specifier changed to",
+				"Token not allowed in a PDF string",
+			}
 		end,
 	},
 }

@@ -17,6 +17,7 @@ return {
 				"rust",
 				"scss",
 				"sql",
+				"typescript",
 				"svelte",
 			},
 
