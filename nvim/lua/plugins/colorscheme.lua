@@ -1,4 +1,5 @@
 return {
+	--everforest
 	{
 		"neanias/everforest-nvim",
 		version = false,
@@ -8,7 +9,21 @@ return {
 		config = function()
 			require("everforest").setup({
 				-- Your config here
+				background = "soft",
 			})
 		end,
 	},
+
+	--catppuccin
+	-- {
+	-- 	"catppuccin/nvim",
+	-- 	name = "catppuccin",
+	-- 	config = function()
+	-- 		require("catppuccin").setup({
+	-- 			-- Your config here
+	-- 			flavour = "frappe", -- latte, frappe, macchiato, mocha
+	-- 		})
+	-- 	end,
+	-- 	priority = 1000,
+	-- },
 }
