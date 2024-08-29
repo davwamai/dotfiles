@@ -8,17 +8,9 @@ return {
 				"cmake",
 				"cpp",
 				"css",
-				"fish",
 				"gitignore",
 				"graphql",
 				"http",
-				"java",
-				"php",
-				"rust",
-				"scss",
-				"sql",
-				"typescript",
-				"svelte",
 			},
 
 			-- matchup = {
