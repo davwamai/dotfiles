@@ -1,2 +1,2 @@
 # dotfiles
-just my nvim config
+all my configs
